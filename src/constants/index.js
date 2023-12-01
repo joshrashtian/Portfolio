@@ -3,6 +3,7 @@ import Disphotoplay from '../assets/projects/Disphotoplay.png'
 import Mario from '../assets/projects/MarioLegacyIcon.png'
 import Tankzone from '../assets/projects/Tank.png'
 import TheRace from '../assets/projects/Car.png'
+import { ReactIcon, java, js, python } from './imageindex'
 const status = ["Finished", "Work In Progress"];
 const types = ["Software", "Video Production"];
 
@@ -75,8 +76,8 @@ const projects = [
   },
   {
     id: 2,
-    title: "Untitled WRTV Project",
-    description: ".",
+    title: "FASFA PSA",
+    description: "FASFA PSA that was submitted to the Hart District.",
     type: "Video Production",
     status: status[0],
     date: "March 2023",
@@ -85,6 +86,7 @@ const projects = [
       "Used to learn the basics of JavaScript, and build a simple project.",
       "AP Computer Science Princples AP Exam",
     ],
+    website: "https://www.youtube.com/watch?v=ej0LSopo77s&pp=ygUQZmFzZmEgd2VzdCByYW5jaA%3D%3D",
     featured: "no",
   },
   {
@@ -168,4 +170,53 @@ const exprience = [
  desc: "",
 }]
 
-export { exprience, projects, studybases };
+const skills = [{
+  id: 1,
+  skill: 'JavaScript',
+  field: 'Programming',
+  icon: js,
+  color: 'font-mono',
+  desc: '',
+},
+{
+  id: 2,
+  skill: 'ReactJS',
+  field: 'Programming',
+  color: 'font-mono',
+  icon: ReactIcon,
+  desc: '',
+},
+{
+  id: 3,
+  skill: 'React Native',
+  field: 'Programming',
+  color: 'font-mono',
+  icon: ReactIcon,
+  desc: '',
+},
+{
+  id: 4,
+  skill: 'Java',
+  field: 'Programming',
+  color: 'font-mono',
+  icon: java,
+  desc: '',
+},
+{
+  id: 5,
+  skill: 'Python',
+  field: 'Programming',
+  color: 'font-mono',
+  desc: '',
+  icon: python,
+},
+{
+  id: 6,
+  skill: 'Premiere Pro',
+  field: 'Video Production',
+  color: 'font-light',
+  desc: '',
+},
+]
+
+export { exprience, projects, studybases, skills };
