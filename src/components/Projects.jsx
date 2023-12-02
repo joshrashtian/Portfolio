@@ -174,7 +174,7 @@ export const Projects = () => {
                 transition={{ delay: 0.1 * index, duration: 0.5, velocity: 5 }}
                 initial={{ opacity: "0%", scale: 0.5 }}
                 animate={{ opacity: "100%", scale: 1 }}
-                onClick={() => {setSelectedProject(project) + window.scrollTo(0, 250)}}
+                onClick={() => {setSelectedProject(project) + window.scrollTo(0, 400)}}
               >
                 <img
                   src={project.logo != undefined ? project.logo : GitHub}

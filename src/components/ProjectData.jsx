@@ -9,9 +9,18 @@ export default function ProjectData(project) {
       animate={{ opacity: "100%", scale: 1.0 }}
       transition={{ type: "spring" }}
     >
-      <img
+      <motion.img
         src={project.project.logo}
         className=" h-[30%] w-[30%] mr-7 rounded-3xl shadow-lg transition-all duration-500"
+        initial={{ scale: 0.8, opacity: "0%" }}
+        whileHover={{scale: 1.1}}
+        animate={{ scale: 1, opacity: "100%" }}
+         transition={{
+            duration: 0.5,
+            type: "spring",
+            damping: 25,
+            stiffness: 500,
+        }}
       />
       <div>
         <h1
@@ -50,7 +59,7 @@ export default function ProjectData(project) {
               initial={{ x: -20, opacity: "0%" }}
               animate={{ x: 0, opacity: "100%" }}
               transition={{
-                delay: index == 1 ? 1 : (index != 0 ? 0.5 * index : 0.5),
+                delay: 0.5 + (index * 0.5),
                 duration: 0.5,
                 type: "spring",
                 damping: 25,
