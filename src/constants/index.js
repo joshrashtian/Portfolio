@@ -77,14 +77,13 @@ const projects = [
   {
     id: 2,
     title: "FASFA PSA",
-    description: "FASFA PSA that was submitted to the Hart District.",
+    description: "FASFA PSA to teach West Ranch students about the FASFA.",
     type: "Video Production",
     status: status[0],
     date: "March 2023",
     tools: ["Premiere Pro"],
     points: [
-      "Used to learn the basics of JavaScript, and build a simple project.",
-      "AP Computer Science Princples AP Exam",
+      "Created for West Ranch TV",
     ],
     website: "https://www.youtube.com/watch?v=ej0LSopo77s&pp=ygUQZmFzZmEgd2VzdCByYW5jaA%3D%3D",
     featured: "no",
@@ -99,7 +98,7 @@ const projects = [
      logo: Mario,
      tools: ["Construct 3", "JavaScript"],
      points: [
-       "Learned Asyncing", "Learned how to make a platformer"
+       "Learned Asyncing", "Learned How-To Build A Platformer", "Mastering the concept of Functions"
      ],
      website: "https://gamegen.games/game/BjEpaGDJ2ksndAhKn",
      featured: "yes",

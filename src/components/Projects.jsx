@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import GitHub from "../assets/projects/github.png";
 import Globe from "../assets/projects/globe.png";
 import { Codebases } from "../components/projects/Codebases";
+import ProjectData from "./ProjectData";
 
 export const Projects = () => {
   const Categories = ["All", "Software", "Video Production", "Video Game"];
   const [selected, setSelected] = useState("");
   const [filteredList, setFilter] = useState(projects);
   const [featured, setFeatured] = useState(projects);
+  const [selectedProject, setSelectedProject] = useState(undefined)
 
   useEffect(() => {
     let feature = "yes";
@@ -125,6 +127,11 @@ export const Projects = () => {
           </motion.div>
         ))}
       </div>
+      {
+        selectedProject != undefined ? 
+        <ProjectData project={selectedProject} /> :
+        null
+      }
       <motion.h1
         transition={{ type: "tween", delay: 0.5, duration: 0.5 }}
         initial={{ x: -40, opacity: "0%" }}
@@ -160,13 +167,14 @@ export const Projects = () => {
       <div className="flex flex-wrap mt-10">
         {filteredList.map((project, index) => (
           <>
-            <Tilt options={{ max: 25, transition: true, perspective: 2000 }}>
+            <Tilt options={{ max: 15, transition: true, perspective: 2000 }}>
               <motion.div
                 key={index}
-                className="p-5 bg-white m-2 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 "
+                className="p-5 bg-white m-2 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl hover:bg-slate-100 transition-all duration-400 "
                 transition={{ delay: 0.1 * index, duration: 0.5, velocity: 5 }}
                 initial={{ opacity: "0%", scale: 0.5 }}
                 animate={{ opacity: "100%", scale: 1 }}
+                onClick={() => {setSelectedProject(project) + window.scrollTo(0, 250)}}
               >
                 <img
                   src={project.logo != undefined ? project.logo : GitHub}
