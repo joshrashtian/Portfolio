@@ -31,8 +31,8 @@ const About = () => {
       {
         skills.map((skill, index) => (
         
-            <motion.div key={index}  className=" w-1/5 h-2/5 mx-2 my-1 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <div className="my-10 mx-3">
+            <motion.div key={index}  className=" w-[15%] h-1/5 mx-2 my-0.5 bg-slate-100 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="my-6 mx-3">
                 <div className="flex justify-between">
                   <h1 className="font-bold text-xl bg-gradient-to-br from-indigo-400 to-blue-800 text-transparent bg-clip-text" >{skill.skill}</h1>
                   <img src={skill.icon} className="h-5 w-5 mr-1 hover:shadow-md hover:h-6 hover:w-6 transition-all duration-200" />
