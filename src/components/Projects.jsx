@@ -13,6 +13,7 @@ export const Projects = () => {
   const [filteredList, setFilter] = useState(projects);
   const [featured, setFeatured] = useState(projects);
   const [selectedProject, setSelectedProject] = useState(undefined)
+  const [currentFilter, setCurrentFilter] = useState(null)
 
   useEffect(() => {
     let feature = "yes";
@@ -32,6 +33,19 @@ export const Projects = () => {
       setFilter(projects);
     }
   }, [selected]);
+
+  const changeFilter = (tool) => {
+    if(tool != null){
+    const filter = projects.filter((project) => project.tools.includes(tool))
+    setCurrentFilter(tool)
+    setFilter(filter)
+    } else {
+    setCurrentFilter(null)
+    setFilter(projects)
+    }
+  }
+
+
 
   return (
     <div>
@@ -129,7 +143,7 @@ export const Projects = () => {
       </div>
       {
         selectedProject != undefined ? 
-        <ProjectData project={selectedProject} /> :
+        <ProjectData project={selectedProject} filter={changeFilter}/> :
         null
       }
       <motion.h1
@@ -164,6 +178,15 @@ export const Projects = () => {
           </motion.button>
         ))}
       </div>
+      { currentFilter != null ?
+      <div className="flex ml-3 items-center">
+        <h1 className=" font-eudoxus text-xl">Current Filter:</h1>
+        <div onClick={() => {changeFilter(null)}} className=" p-2 bg-slate-200 cursor-pointer hover:bg-slate-600 ml-1 rounded-2xl transition-all duration-200 group ">
+          <h1 className=" font-eudoxus text-xl hover:text-white transition-all duration-200 "> {currentFilter}</h1>
+        </div>
+      </div>
+       : null }
+      
       <div className="flex flex-wrap mt-10">
         {filteredList.map((project, index) => (
           <>

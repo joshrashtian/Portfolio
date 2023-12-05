@@ -3,7 +3,7 @@ import Disphotoplay from '../assets/projects/Disphotoplay.png'
 import Mario from '../assets/projects/MarioLegacyIcon.png'
 import Tankzone from '../assets/projects/Tank.png'
 import TheRace from '../assets/projects/Car.png'
-import { ReactIcon, java, js, python } from './imageindex'
+import { Pr, ReactIcon, java, js, python } from './imageindex'
 const status = ["Finished", "Work In Progress"];
 const types = ["Software", "Video Production"];
 
@@ -174,8 +174,10 @@ const skills = [{
   skill: 'JavaScript',
   field: 'Programming',
   icon: js,
+  headcolor: 'text-yellow-600',
   color: 'font-mono',
   desc: '',
+  examples: '',
 },
 {
   id: 2,
@@ -184,6 +186,7 @@ const skills = [{
   color: 'font-mono',
   icon: ReactIcon,
   desc: '',
+  examples: '',
 },
 {
   id: 3,
@@ -192,29 +195,37 @@ const skills = [{
   color: 'font-mono',
   icon: ReactIcon,
   desc: '',
+  examples: '',
 },
 {
   id: 4,
   skill: 'Java',
   field: 'Programming',
+  headcolor: 'text-red-800',
   color: 'font-mono',
   icon: java,
   desc: '',
+  examples: '',
 },
 {
   id: 5,
   skill: 'Python',
   field: 'Programming',
+  headcolor: 'text-orange-800',
   color: 'font-mono',
   desc: '',
   icon: python,
+  examples: '',
 },
 {
   id: 6,
   skill: 'Premiere Pro',
   field: 'Video Production',
+  headcolor: 'text-indigo-800',
   color: 'font-light',
   desc: '',
+  examples: '',
+  icon: Pr,
 },
 ]
 

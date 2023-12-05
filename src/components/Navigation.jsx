@@ -32,7 +32,7 @@ const Navigation = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white font-bold" : "text-gray-400"
-              } hover:text-white hover:duration-300 hover:text-lg hover:shadow-lg cursor-pointer font-medium`}
+              } hover:text-white hover:duration-300 hover:text-lg hover:shadow-lg cursor-pointer font-eudoxus`}
             onClick={() => {setActive(link.title)}}
             >
               <Link to={link.id}>{link.title}</Link>

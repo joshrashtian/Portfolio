@@ -3,7 +3,14 @@ import { motion } from "framer-motion";
 import GitHub from "../assets/projects/github.png"
 import Globe from "../assets/projects/globe.png"
 
-export default function ProjectData(project) {
+export default function ProjectData ({ project, filter }) {
+
+  console.log(project)
+
+  const handleFilter = (tool) => {
+    filter(tool)
+  }
+
   return (
     <motion.div
       className="p-20 bg-slate-200 flex items-center mt-10"
@@ -12,7 +19,7 @@ export default function ProjectData(project) {
       transition={{ type: "spring" }}
     >
       <motion.img
-        src={project.project.logo}
+        src={project.logo}
         className=" h-[30%] w-[30%] mr-7 rounded-3xl shadow-lg transition-all duration-500"
         initial={{ scale: 0.8, opacity: "0%" }}
         whileHover={{ scale: 1.1 }}
@@ -27,28 +34,29 @@ export default function ProjectData(project) {
       <div>
         <h1
           className={`${
-            project.project.type == "Software" ? "text-teal-800" : "font-bold"
-          } text-2xl font-bold`}
+            project.type == "Software" ? "text-teal-800 font-eudoxus" : "font-bold"
+          } text-2xl font-eudoxus`}
         >
-          {project.project.title}
+          {project.title}
         </h1>
         <h2
           className={`${
-            project.project.type == "Software"
-              ? "from-teal-800 to-teal-500"
-              : project.project.type == "Video Game"
-              ? "from-orange-800 to-orange-500"
-              : "from-indigo-700 to-purple-700"
+            project.type == "Software"
+              ? "from-teal-800 to-teal-500 font-eudoxus"
+              : project.type == "Video Game"
+              ? "from-orange-800 to-orange-500 font-eudoxus"
+              : "from-indigo-700 to-purple-700 font-eudoxus"
           } text-lg font-semibold bg-gradient-to-br bg-clip-text text-transparent`}
         >
-          {project.project.type}
+          {project.type}
         </h2>
-        <h2>{project.project.description}</h2>
+        <h2 className="font-eudoxus text-slate-600">{project.description}</h2>
         <div className="flex flex-wrap">
-          {project.project.tools.map((tool, index) => (
+          {project.tools.map((tool, index) => (
             <h1
               key={index}
-              className="p-1 px-3 rounded-lg bg-slate-300 shadow-sm m-1 mt-3 text-teal-950 font-semibold "
+              onClick={() => {handleFilter(tool)}}
+              className="p-1 px-3 cursor-pointer font-eudoxus rounded-lg bg-slate-300 hover:bg-slate-400 shadow-sm m-1 mt-3 text-teal-950 font-semibold transition-all duration-200 "
             >
               {tool}
             </h1>
@@ -58,7 +66,7 @@ export default function ProjectData(project) {
           <h2 className="font-bold ml-2 mb-4 text-xl text-slate-100">
             Impacts/Concepts
           </h2>
-          {project.project.points.map((point, index) => (
+          {project.points.map((point, index) => (
             <motion.div
               className="flex bg-slate-400 my-0.5"
               initial={{ x: -20, opacity: "0%" }}
@@ -74,9 +82,9 @@ export default function ProjectData(project) {
             >
               <div
                 className={`${
-                  project.project.type == "Software"
+                  project.type == "Software"
                     ? "from-teal-700 to-teal-500"
-                    : project.project.type == "Video Game"
+                    : project.type == "Video Game"
                     ? "from-orange-800 to-orange-500"
                     : "from-indigo-700 to-purple-700"
                 } p-0.5 bg-gradient-to-b rounded-xl`}
@@ -95,7 +103,7 @@ export default function ProjectData(project) {
           damping: 25,
           stiffness: 500,
         }} >
-        {project.project.source_code != undefined ? (
+        {project.source_code != undefined ? (
           <div className=" w-52 h-9 flex bg-slate-800 items-center justify-center hover:justify-evenly rounded-[10px] hover:rounded-[6px] hover:scale-[1.1] hover:bg-slate-600 transition-all duration-400 shadow-sm my-2 group">
             <img
               src={GitHub}
@@ -104,18 +112,18 @@ export default function ProjectData(project) {
             <a
               className="font-bold align-middle text-white transition-all duration-400"
               href={
-                project.project.source_code != undefined
-                  ? project.project.source_code
+                project.source_code != undefined
+                  ? project.source_code
                   : null
               }
             >
-              {project.project.source_code != undefined
+              {project.source_code != undefined
                 ? "View Source Code"
                 : null}
             </a>
           </div>
         ) : null}
-        {project.project.website != undefined ? (
+        {project.website != undefined ? (
           <div className=" w-52 h-10 items-center text-center justify-center hover:justify-evenly flex bg-teal-700 rounded-[20px] hover:rounded-[10px] hover:scale-[1.1] hover:bg-teal-800 transition-all duration-400 shadow-sm my-2 group">
             <img
               src={Globe}
@@ -123,7 +131,7 @@ export default function ProjectData(project) {
             />
             <a
               className="font-bold align-middle group-hover:mr-3 text-white transition-all duration-300"
-              href={project.project.website != undefined ? project.project.website : null}
+              href={project.website != undefined ? project.website : null}
             >
               Visit Website
             </a>
