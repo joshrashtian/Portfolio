@@ -9,7 +9,7 @@ import { Linkedin } from "../constants/imageindex";
 export const Home = () => {
   return (
     <motion.div>
-      <div className="flex justify-evenly">
+      <div className="flex justify-evenly items-center">
         <div className="mt-40">
           <motion.h1
             initial={{ x: -100, opacity: "0%" }}

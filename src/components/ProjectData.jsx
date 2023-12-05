@@ -5,8 +5,6 @@ import Globe from "../assets/projects/globe.png"
 
 export default function ProjectData ({ project, filter }) {
 
-  console.log(project)
-
   const handleFilter = (tool) => {
     filter(tool)
   }
@@ -20,7 +18,7 @@ export default function ProjectData ({ project, filter }) {
     >
       <motion.img
         src={project.logo}
-        className=" h-[30%] w-[30%] mr-7 rounded-3xl shadow-lg transition-all duration-500"
+        className=" h-[20%] w-[20%] mr-7 rounded-3xl shadow-lg transition-all duration-500"
         initial={{ scale: 0.8, opacity: "0%" }}
         whileHover={{ scale: 1.1 }}
         animate={{ scale: 1, opacity: "100%" }}

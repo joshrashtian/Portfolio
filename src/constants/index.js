@@ -21,6 +21,10 @@ export const navLinks = [
     id: "projects",
     title: "Projects",
   },
+  {
+    id: "blog",
+    title: "Blog"
+  }
 ];
 
 const projects = [
@@ -227,6 +231,16 @@ const skills = [{
   examples: '',
   icon: Pr,
 },
+{
+  id: 7,
+  skill: 'Photoshop',
+  field: 'Graphic Design',
+  headcolor: 'text-teal-800',
+  color: 'font-light',
+  desc: '',
+  examples: '',
+  icon: Pr,
+}
 ]
 
 export { exprience, projects, studybases, skills };

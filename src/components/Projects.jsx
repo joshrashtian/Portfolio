@@ -48,12 +48,12 @@ export const Projects = () => {
 
 
   return (
-    <div>
+    <div className="mx-20">
       <motion.h1
         transition={{ duration: 0.3 }}
         initial={{ x: -90, opacity: "0%" }}
         animate={{ x: 0, opacity: "100%" }}
-        className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300"
+        className=" font-eudoxus text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300"
       >
         Featured Projects
       </motion.h1>
@@ -150,14 +150,14 @@ export const Projects = () => {
         transition={{ type: "tween", delay: 0.5, duration: 0.5 }}
         initial={{ x: -40, opacity: "0%" }}
         animate={{ x: 0, opacity: "100%" }}
-        className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300"
+        className="font-eudoxus text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300"
       >
         Projects
       </motion.h1>
       <div className="flex flex-wrap mx-2">
         {Categories.map((category, index) => (
           <motion.button
-            className="w-48 h-10 shadow-md bg-blue-400 hover:bg-blue-600 hover:rounded-xl m-1 rounded-3xl text-white font-[700] transition-all duration-200"
+            className="w-48 h-10 shadow-md bg-purple-900 hover:bg-blue-950 hover:rounded-xl m-1 rounded-3xl text-white font-[700] transition-all duration-200"
             type="button"
             transition={{
               type: "tween",
@@ -193,7 +193,7 @@ export const Projects = () => {
             <Tilt options={{ max: 15, transition: true, perspective: 2000 }}>
               <motion.div
                 key={index}
-                className="p-5 bg-white m-2 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl hover:bg-slate-100 transition-all duration-400 "
+                className="p-5 cursor-pointer items-center bg-white m-2 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl hover:bg-slate-100 transition-all duration-400 "
                 transition={{ delay: 0.1 * index, duration: 0.5, velocity: 5 }}
                 initial={{ opacity: "0%", scale: 0.5 }}
                 animate={{ opacity: "100%", scale: 1 }}
@@ -205,7 +205,7 @@ export const Projects = () => {
                 />
                 <div className="ml-3">
                   <div className="flex">
-                    <h1 className="mr-2 font-medium">{project.title} - </h1>
+                    <h1 className="mr-2 font-eudoxus">{project.title} - </h1>
                     <h1
                       className={`${
                         project.type === "Software"
@@ -213,12 +213,12 @@ export const Projects = () => {
                           : project.type === "Video Game"
                           ? "text-red-500"
                           : "text-orange-400"
-                      }`}
+                      } font-eudoxus`}
                     >
                       {project.type}
                     </h1>
                   </div>
-                  <h2>{project.description}</h2>
+                  <h2 className="font-eudoxus text-slate-500 text-sm">{project.description}</h2>
 
                   <h1 className="mr-2 font-light">
                     {" "}
@@ -232,7 +232,7 @@ export const Projects = () => {
                   <div className="flex flex-row">
                     {project.tools.map((tool) => (
                       <div className="mx-1 cursor-grabbing bg-slate-200 hover:bg-slate-300 p-1 px-2 rounded-lg transition-all">
-                        <h1 className="text-sm font-light ">{tool}</h1>
+                        <h1 className="text-sm font-eudoxus">{tool}</h1>
                       </div>
                     ))}
                   </div>

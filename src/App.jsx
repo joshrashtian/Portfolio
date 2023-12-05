@@ -7,6 +7,7 @@ import { Projects } from "./components/Projects";
 import Journey from "./components/Journey";
 import About from "./components/About";
 import ErrorPage from "./components/404";
+import { Blog } from "./components/Blog";
 
 function App () {
   return (
@@ -18,6 +19,7 @@ function App () {
           <Route path="/about" element={<About />} />
           <Route path="/story" element={<Journey />} />
           <Route path="/projects" element={<Projects />}/>
+          <Route path="/blog" element={<Blog />}/>
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
