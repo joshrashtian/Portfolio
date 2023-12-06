@@ -9,7 +9,7 @@ const Navigation = () => {
   const [active, setActive] = useState("");
 
   return (
-    <motion.nav initial={{opacity: '0%'}} animate={{opacity: '100%'}} transition={{delay: 1, duration: 1}} className="bg-gradient-to-r mx-64 mt-6 rounded-3xl from-indigo-800 to-purple-900 transition-all duration-300">
+    <motion.nav initial={{opacity: '0%'}} animate={{opacity: '100%'}} transition={{delay: 1, duration: 1}} className="bg-gradient-to-r mx-48 mt-6 rounded-3xl from-indigo-800 to-purple-900 transition-all duration-300">
       <motion.div className="w-full h-24 mx-3 flex flex-row items-center justify-between rounded-b-lg ">
         <Link
           to="/"

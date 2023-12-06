@@ -8,6 +8,7 @@ import Journey from "./components/Journey";
 import About from "./components/About";
 import ErrorPage from "./components/404";
 import { Blog } from "./components/Blog";
+import BottomRow from "./components/BottomRow";
 
 function App () {
   return (
@@ -23,6 +24,7 @@ function App () {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
+    <BottomRow />
     </>
   )
 }
