@@ -185,7 +185,7 @@ const skills = [{
 },
 {
   id: 2,
-  skill: 'ReactJS',
+  skill: 'React',
   field: 'Programming',
   color: 'font-mono',
   icon: ReactIcon,
