@@ -8,14 +8,14 @@ import { Linkedin } from "../constants/imageindex";
 
 export const Home = () => {
   return (
-    <motion.div>
+    <motion.div className=" h-screen mt-[5%] ">
       <div className="flex justify-evenly items-center">
-        <div className="mt-40">
+        <div className="items-center">
           <motion.h1
             initial={{ x: -100, opacity: "0%" }}
             animate={{ x: 0, opacity: "100%" }}
             transition={{ duration: 1 }}
-            className=" text-5xl ml-10 mt-36 font-eudoxus text-slate-500 "
+            className=" text-5xl ml-10 font-eudoxus text-slate-500 "
           >
             Hello, my name is
           </motion.h1>
@@ -66,7 +66,7 @@ export const Home = () => {
           className=" h-2/5 w-1/5 mt-3 hover:scale-[1.1] hover:shadow-2xl shadow-lg rounded-3x transition-all duration-500 rounded-3xl"
         />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-20">
         <motion.div
           initial={{ opacity: "0%" }}
           animate={{ opacity: "100%" }}
@@ -98,7 +98,7 @@ export const Home = () => {
         <motion.div
           initial={{ opacity: "0%" }}
           animate={{ opacity: "100%" }}
-          transition={{ delay: 4.5, duration: 1, type: "just" }}
+          transition={{ delay: 5, duration: 1, type: "just" }}
           className=" p-4 px-7 items-center text-center flex hover:scale-110 justify-evenly mt-10 duration-300 transition-all bg-gradient-to-tr from-blue-900 to-blue-800 rounded-xl hover:bg-slate-800"
         >
           <img src={Linkedin} className="h-6 w-6 rounded-lg mr-2" />

@@ -9,6 +9,9 @@ import About from "./components/About";
 import ErrorPage from "./components/404";
 import { Blog } from "./components/Blog";
 import BottomRow from "./components/BottomRow";
+import { ProjectsPage } from "./components/ProjectsPage";
+import { ProjectHub } from "./components/projects/ProjectHub";
+import { ProjectScreen } from "./components/projects/ProjectScreen";
 
 function App () {
   return (
@@ -19,7 +22,11 @@ function App () {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/story" element={<Journey />} />
-          <Route path="/projects" element={<Projects />}/>
+          <Route path="/projects" element={<ProjectsPage />}>
+            <Route path="" element={<ProjectHub />} />
+            <Route path="database" element={<Projects />}/>
+            <Route path=":id" element={<ProjectScreen />}/>
+          </Route>
           <Route path="/blog" element={<Blog />}/>
           <Route path="*" element={<ErrorPage />} />
         </Routes>
