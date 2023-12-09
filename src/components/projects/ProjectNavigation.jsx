@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Buttons = [{
     num: 0,
     id: "/projects/",
-    title: "Projects"
+    title: "Products"
 },
 {
     num: 1,

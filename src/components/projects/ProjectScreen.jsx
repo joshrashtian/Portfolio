@@ -16,9 +16,15 @@ export const ProjectScreen = () => {
   })
 
   return (
-    <div>
-        <h1 className=' font-eudoxus text-3xl'>{project.title}</h1>
-        <h2>{project.desc}</h2>
+    <div className=' ml-20 mt-10'>
+        <div className='flex items-center'>
+        <h1 className=' font-eudoxus text-6xl'>{project.title}</h1>
+        <div className='p-0.5 px-2 bg-slate-100 items-center ml-2 rounded-xl'>
+            <h2 className='font-eudoxus text-teal-600'>{project.state}</h2>
+        </div>
+        </div>
+        <h2 className='font-eudoxus text-slate-500 text-2xl'>{project.desc}</h2>
+        
     </div>
   )
 }

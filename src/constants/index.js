@@ -249,7 +249,10 @@ const specialProjects = [
     title: 'SwiftStudies',
     type: 'Mobile Application',
     desc: 'Aesthic Stopwatch for Focusing, and Working.',
+    about: '',
     state: 'BETA',
+    downloadType: 'iOS',
+    downloadLink: '',
   },
   {
     id: 1,
@@ -257,6 +260,9 @@ const specialProjects = [
     type: 'Mobile Application',
     desc: 'For MESA.',
     state: 'WIP',
+    downloadType: 'Download',
+    downloadLink: '',
+
   },
 ]
 
