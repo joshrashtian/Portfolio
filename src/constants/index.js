@@ -3,7 +3,7 @@ import Disphotoplay from '../assets/projects/Disphotoplay.png'
 import Mario from '../assets/projects/MarioLegacyIcon.png'
 import Tankzone from '../assets/projects/Tank.png'
 import TheRace from '../assets/projects/Car.png'
-import { Pr, ReactIcon, java, js, python } from './imageindex'
+import { Pr, ReactIcon, SwiftStudies1, java, js, python } from './imageindex'
 const status = ["Finished", "Work In Progress"];
 const types = ["Software", "Video Production"];
 
@@ -249,20 +249,11 @@ const specialProjects = [
     title: 'SwiftStudies',
     type: 'Mobile Application',
     desc: 'Aesthic Stopwatch for Focusing, and Working.',
-    about: '',
+    about: 'In a world where the basic stopwatch might be somewhat basic, SwiftStudies wants to provide an unique, colorful, and very feature packed Stopwatch app. Apply a unique font or change the background color to your liking, or even pick your own background color! Other functionalities range from the unique Task system, allowing you to focus on a task and track how long you spent on it. For marathon runners, you may also record your time, and check on it later to see how many laps you have ran.',
     state: 'BETA',
     downloadType: 'iOS',
     downloadLink: '',
-  },
-  {
-    id: 1,
-    title: 'Mesa Skills Lab',
-    type: 'Mobile Application',
-    desc: 'For MESA.',
-    state: 'WIP',
-    downloadType: 'Download',
-    downloadLink: '',
-
+    img: SwiftStudies1,
   },
 ]
 
