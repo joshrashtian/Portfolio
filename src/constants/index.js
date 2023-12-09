@@ -243,4 +243,21 @@ const skills = [{
 }
 ]
 
-export { exprience, projects, studybases, skills };
+const specialProjects = [
+  {
+    id: 0,
+    title: 'SwiftStudies',
+    type: 'Mobile Application',
+    desc: 'Aesthic Stopwatch for Focusing, and Working.',
+    state: 'BETA',
+  },
+  {
+    id: 1,
+    title: 'Mesa Skills Lab',
+    type: 'Mobile Application',
+    desc: 'For MESA.',
+    state: 'WIP',
+  },
+]
+
+export { exprience, projects, studybases, skills, specialProjects };
