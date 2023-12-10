@@ -5,6 +5,7 @@ import { LetDecor } from "./home/letdecor";
 import { Introduction } from "../constants/aboutText";
 import { skills } from "../constants";
 import { useScroll } from "framer-motion";
+import { DeepDive } from "./about/DeepDive";
 const About = () => {
   const [filteredSkills, setFilteredSkills] = useState(skills);
 
@@ -43,11 +44,12 @@ const About = () => {
       <motion.div className="flex flex-row-reverse mx-10 justify-center ">
         <div className=" w-1/2 h-96 bg-white border-indigo-200 border-2 rounded-xl shadow-md mt-6">
           <h1 className=" font-eudoxus m-5 text-3xl">Deep Dive</h1>
-          <h2 className="font-eudoxus text-zinc-500 ml-5 text-xl">
+          
             {active != null
-              ? null
-              : "Click a card to get a closer look at any of the skillset!"}
-          </h2>
+              ? <DeepDive skill={active} />
+              : <h2 className="font-eudoxus text-zinc-500 ml-5 text-xl">
+              Click any card to view skill! </h2>}
+          
         </div>
         <div className="flex flex-row flex-wrap mt-6">
           {filteredSkills.map((skill, index) => (
@@ -63,6 +65,7 @@ const About = () => {
                 damping: 25,
                 stiffness: 500,
               }}
+              onClick={() => {setActive(skill)}}
               className=" w-[30%] cursor-pointer h-2/6 mx-1 my-0.5 bg-slate-100 hover:bg-white rounded-lg shadow-md hover:scale-115 scale-100 hover:shadow-xl transition-all duration-300"
             >
               <div className="my-6 mx-3">
@@ -84,7 +87,7 @@ const About = () => {
                 <div className="flex items-center">
                   <p className={`${skill.color} text-xl`}>{skill.field}</p>
                 </div>
-                <p className="font-light text-xl">{skill.desc}</p>
+
               </div>
             </motion.div>
           ))}

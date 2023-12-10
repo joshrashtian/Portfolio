@@ -189,16 +189,7 @@ const skills = [{
   field: 'Programming',
   color: 'font-mono',
   icon: ReactIcon,
-  desc: '',
-  examples: '',
-},
-{
-  id: 3,
-  skill: 'React Native',
-  field: 'Programming',
-  color: 'font-mono',
-  icon: ReactIcon,
-  desc: '',
+  desc: 'I have used React as my primary framework. Between developing projects in React Native, to this here portfolio, React + JavaScript have become a bread and butter when it comes to the web.',
   examples: '',
 },
 {
