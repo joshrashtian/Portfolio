@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { specialProjects } from "../../constants";
 import { AppleStore } from "../../constants/imageindex";
+import ErrorPage from "../404";
 
 export const ProjectScreen = () => {
   const { id } = useParams();
-  const [project, setProject] = useState({});
+  const [project, setProject] = useState({title: ''});
 
   useEffect(() => {
     for (let i = 0; i < specialProjects.length; i++) {
@@ -14,7 +15,14 @@ export const ProjectScreen = () => {
         break;
       }
     }
+    console.log(id)
+    console.log(project)
+    
   });
+
+  if (project.title.length === 0) {
+   return <ErrorPage />  
+  }
 
   return (
     <div className=" mx-20 mt-10 h-screen">
