@@ -12,6 +12,7 @@ import BottomRow from "./components/BottomRow";
 import { ProjectsPage } from "./components/ProjectsPage";
 import { ProjectHub } from "./components/projects/ProjectHub";
 import { ProjectScreen } from "./components/projects/ProjectScreen";
+import { Admin } from "./components/Admin";
 
 function App () {
   return (
@@ -28,6 +29,7 @@ function App () {
             <Route path=":id" element={<ProjectScreen />}/>
           </Route>
           <Route path="/blog" element={<Blog />}/>
+          <Route path="/admin" element={<Admin />}/>
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
