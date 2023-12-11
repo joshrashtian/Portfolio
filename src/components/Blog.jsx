@@ -24,7 +24,7 @@ export const Blog = () => {
     }
 
     getBlogPosts()
-  })
+  }, [])
 
   return (
     <div className='  py-3 pb-10 mx-14 my-10'>

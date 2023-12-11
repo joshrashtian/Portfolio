@@ -4,7 +4,6 @@ import { projects } from "../constants";
 import { motion } from "framer-motion";
 import GitHub from "../assets/projects/github.png";
 import Globe from "../assets/projects/globe.png";
-import { Codebases } from "../components/projects/Codebases";
 import ProjectData from "./ProjectData";
 
 export const Projects = () => {
@@ -277,10 +276,6 @@ export const Projects = () => {
             </Tilt>
           </>
         ))}
-      </div>
-      <h1 className="font-bold text-[20px] ml-2">Codebases</h1>
-      <div className="mt-2">
-        <Codebases />
       </div>
     </div>
   );
