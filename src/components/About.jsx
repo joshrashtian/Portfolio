@@ -6,6 +6,7 @@ import { Introduction } from "../constants/aboutText";
 import { skills } from "../constants";
 import { useScroll } from "framer-motion";
 import { DeepDive } from "./about/DeepDive";
+import Achievements from "./about/Achievements";
 const About = () => {
   const [filteredSkills, setFilteredSkills] = useState(skills);
 
@@ -59,11 +60,15 @@ const About = () => {
               animate={{ y: 0, opacity: "100%" }}
               whileHover={{scale: 1.05}}
               transition={{
-                delay: 0.5 + index * 0.5,
+                scale: { delay: 0, duration: 0.1 },
+                y: {delay: 0.5 + index * 0.5},
+                opacity: {delay: 0.5 + index * 0.5},
                 duration: 0.5,
                 type: "spring",
                 damping: 25,
                 stiffness: 500,
+                
+                
               }}
               onClick={() => {setActive(skill)}}
               className=" w-[30%] cursor-pointer h-2/6 mx-1 my-0.5 bg-slate-100 hover:bg-white rounded-lg shadow-md hover:scale-115 scale-100 hover:shadow-xl transition-all duration-300"
@@ -92,6 +97,10 @@ const About = () => {
             </motion.div>
           ))}
         </div>
+      </motion.div>
+      <motion.div>
+        <h1 className=" ml-5 mb-7 font-eudoxus text-6xl  bg-gradient-to-r from-red-500 to-orange-600 text-transparent bg-clip-text mt-16" >Achievements</h1>
+        <Achievements />
       </motion.div>
     </motion.div>
   );
